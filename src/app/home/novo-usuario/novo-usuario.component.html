@@ -1,0 +1,20 @@
+<h4 class="text-center">Registre-se</h4>
+<form class="form mt-4" [formGroup]="novoUsuarioForm" (ngSubmit)="cadastrar()">
+  <div class="form-group">
+    <input placeholder="seuemail@email.com" class="form-control" formControlName="email">
+  </div>
+  <div class="form-group">
+    <input placeholder="Nome completo" class="form-control" formControlName="fullName">
+  </div>
+  <div class="form-group">
+    <input placeholder="Usuário" class="form-control" formControlName="userName">
+  </div>
+  <div class="form-group">
+    <input type="password" placeholder="senha" class="form-control" formControlName="password">
+  </div>
+  <div class="d-grid gap-2">
+    <button class="btn btn-primary btn-block">Cadastro</button>
+  </div>
+</form>
+
+<p>Já está cadastrado? <a [routerLink]="['']">Logar</a></p>
